@@ -1,0 +1,13 @@
+.tile {
+	width: 25px;
+	height: 25px;
+	border: 1px solid;
+}
+
+.div {
+	display: inline-block;
+}
+
+.divRow {
+	display: flex;
+}

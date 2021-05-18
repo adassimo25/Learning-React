@@ -1,0 +1,42 @@
+
+.divS {
+	border-width: 2px;
+	border-color: black;
+	border-style: solid;
+	margin: 20px 50px 0px 50px;
+}
+/*style={{ border: '2px solid black', margin: '20px 50px 0px 50px', position: 'relative' }}*/
+
+.tdS {
+	text-align: center;
+	width: 25%;
+}
+/*style={{ textAlign: 'center', verticalAlign: 'center', width: '33%' }}*/
+
+.imgS {
+	width: 150px;
+	height: 100px;
+	object-fit: contain;
+}
+/*style={{ width: '150px', height: '100px', objectFit: 'contain'}*/
+
+.labelS {
+	font-size: 20px;
+	font-style: bold;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttonS {
+	font-size: 16px;
+	width: 50%;
+	display: inline;
+	font-style: bold;
+}
+
+.inputS {
+	font-style: bold;
+	font-family: 'Comic sans MS';
+	font-size: 16px;
+	text-align: center;
+	width: 50%;
+}
