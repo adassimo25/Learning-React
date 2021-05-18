@@ -8,19 +8,7 @@ export class CarsListItem extends React.Component {
 			car: props.car,
 			isEdited: props.isEdited,
 		}
-		this.changePrice = this.changePrice.bind(this);
 		this.changeEditState = this.changeEditState.bind(this);
-
-	}
-
-	changePrice(newPrice) {
-		this.setState((prevState) => ({
-			...prevState,
-			car: {
-				...prevState.car,
-				pricePerDay: newPrice,
-			}
-		}))
 	}
 
 	changeEditState() {
@@ -49,12 +37,13 @@ export class CarsListItem extends React.Component {
 							<td className="tdS">
 								{this.state.isEdited === false ?
 									<label className="labelS">Price per day: {this.state.car.pricePerDay}</label> :
-									<input className="inputS" type="number" value={this.state.car.pricePerDay} onChange={e => this.changePrice(e.target.value)} />}
+									<input className="inputS" type="number" value={this.state.car.pricePerDay} onChange={e => this.props.changePrice(this.state.car.id, e.target.value)} />}
 								<br />
 								{this.state.isEdited === false ?
 									<button className="buttonS" onClick={this.changeEditState}>Edit</button> :
 									<button className="buttonS" onClick={this.changeEditState}>Save</button>}
-								<br /><button className="buttonS" onClick={() => this.props.deleteItem(this.state.car.id)}>Delete</button>
+								<br />
+								<button className="buttonS" onClick={() => this.props.deleteItem(this.state.car.id)}>Delete</button>
 								<br />
 							</td>
 						</tr>
